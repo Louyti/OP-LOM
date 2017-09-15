@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<HTML>
+	<head>
+		<meta charset="UTF-8">
+		<style>
+			h1 {
+				font-family: "Gill sans",sans-serif;
+				font-size: 100px;
+				color: dimgray;
+				position: absolute;
+				top: 16%;
+				left: 48%;
+				margin-right: -50%;
+				transform: translate(-50%, -50%);
+			}
+		
+			input[type=submit] {
+				background-color: dimgrey;
+				color: white;
+				padding: 12px 20px;
+				border: none;
+				border-radius: 4px;
+				cursor: pointer;
+				position: absolute;
+				top: 60%;
+				left: 48%;
+				margin-right: -50%;
+				transform: translate(-50%, -50%);
+			}
+			input[type=text]{
+				padding: 30px 36px;
+				border: none;
+				border-radius: 4px;
+				background-color: #f1f1f1;
+				position: absolute;
+				-webkit-transition: 0.5s;
+				transition: 0.5s;
+				outline: none;
+				top: 39%;
+				left: 48%;
+				margin-right: -50%;
+				transform: translate(-50%, -50%)
+			}
+			input[type=password]{
+				padding: 30px 36px;
+				border: none;
+				border-radius: 4px;
+				background-color: #f1f1f1;
+				-webkit-transition: 0.5s;
+				transition: 0.5s;
+				outline: none;
+				position: absolute;
+				top: 51%;
+				left: 48%;
+				margin-right: -50%;
+				transform: translate(-50%, -50%)
+			}
+			input[type=text]:focus {
+				border: 1px solid #555;
+			}
+			input[type=password]:focus {
+				border: 1px solid #555;
+			}
+			input[type=text] {
+				font-size:18px;
+				font-family:"Gill Sans", sans-serif;
+			}
+			input[type=password] {
+				font-size:18px;
+				font-family:"Gill Sans", sans-serif;
+			}
+			input[type=text]{
+				border-radius:0px;
+			}
+			input[type=password]{
+				border-radius:0px;
+			}
+		</style>
+		<title> Login </title>
+	</head>
+	<body onload="lol()">
+		<h1>OpLoR™</h1>
+		<form action="login.php" method="post">
+			<input align="midlle" type="text" name="firstname" id="lol" value="" placeholder="Username" autocapitalize="none" autocomplete="off"> <br>
+			<input type="password" name="password" id="lol" value="" placeholder="Password" autocomplete="off"> <br><br>
+			<input type="submit" id="poga" value="Go">
+		</form>
+		<script>
+		function lol(){
+		document.cookie="text=;"
+		}
+		</script>
+	</body>
+</HTML> 

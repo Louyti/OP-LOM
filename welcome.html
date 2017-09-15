@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<title>Welcome</title>
+<style>
+	button{
+		left: 0px;
+}
+	#r{
+	font-family:"Comic Sans MS", cursive, sans-serif;
+}
+	#fo{
+		visibility: hidden;
+}
+</style>
+<head>
+</head>
+<body>
+<img src="karogs.jpg" style="width:100%; height:825px;">
+<p style="position: absolute; font-size:70px; left:200px; top: 310px;">A <font id="l">warm</font> welcome from Latvia</p>
+<img src="candle.png" onmouseover="hot()" onmouseout="warm()" style="position:absolute; left:10px; bottom:-50px;" width="60px" height="60px" >
+<p style="text-align:right;">Made by Sakars</p>
+<p id="c"></p>
+<p id="e"></p>
+<p id="r" style='position:absolute; top:100px; left:200px; text-align:center; text-shadow: 3px 2px red; font-size: 100px;'></p>
+<p id="tro"></p>
+<p id="wa"></p>
+<div id="bu"style="position:absolute; right:10px; top:900px;"><button onclick="lol()"><p id="d">Do NOT press me!!!</p></button></div>
+<img id="fo" src="t1.jpg" style="position:absolute; left:25%; bottom:-800px; width:50%; height:50%;">
+</body>
+<script>
+function hot(){
+	document.getElementById("l").innerHTML="<ins><i>hot</i></ins>";
+	document.getElementById("l").color="red";
+	document.getElementById("wa").innerHTML="<img src='fire.gif' style='position:absolute; bottom: -20px; height:500px;  width:99%;'>"
+}
+function warm(){
+	document.getElementById("l").innerHTML="warm";
+	document.getElementById("l").color="black";
+	document.getElementById("wa").innerHTML="";
+}
+function lul(){
+	document.getElementById("bu").innerHTML='<button onclick="lal()" ><p id="d">Ok I will fix it</p></button>';
+}
+function lal(){
+	document.getElementById("tro").innerHTML="<img src='lol.png' style='position:absolute; top: 0px; left: 0px; height:100%;  width:100%;'>";
+	document.getElementById("bu").innerHTML='<button onclick="lal()" disabled><p id="d">No LOL</p></button>';
+	setTimeout(function(){
+	document.getElementById("tro").innerHTML="";
+	document.getElementById("bu").innerHTML='<button onclick="lel()" ><p id="d">Now for serious.<br> I will fix it</p></button>';
+	},3000)
+}
+function lel(){
+	document.getElementById("fo").style.visibility = 'visible';
+	document.getElementById("bu").innerHTML='<button onclick="lal()" disabled><p id="d">I cannot believe you fell <br> for it again</p></button>';
+	document.getElementById( 'fo' ).scrollIntoView();
+}
+function lol(){
+	document.getElementById("bu").innerHTML='<button onclick="lul()"><p id="d">See? This is what <br>happens when you <br>press things you should not!</p></button>';
+	document.getElementById("r").innerHTML='<FONT COLOR="#FF0000">I</FONT> <FONT COLOR="#FF4D00">N</FONT><FONT COLOR="#FF9A00">O</FONT><FONT COLOR="#FFE700">T</FONT> <FONT COLOR="#FFff00">G</FONT><FONT COLOR="#B2ff00">O</FONT><FONT COLOR="#65ff00">O</FONT><FONT COLOR="#18ff00">D</FONT><br><FONT COLOR="#00ff00">W</FONT><FONT COLOR="#00ff4D">I</FONT><FONT COLOR="#00ff9A">T</FONT><FONT COLOR="#00ffE7">H</FONT> <FONT COLOR="#00ffff">C</FONT><FONT COLOR="#00E7ff">O</FONT><FONT COLOR="#009Aff">M</FONT><FONT COLOR="#004Dff">P</FONT><FONT COLOR="#0000ff">U</FONT><FONT COLOR="#1800ff">T</FONT><FONT COLOR="#6500ff">E</FONT><FONT COLOR="#B200ff">R</FONT>';
+	document.getElementById("c").innerHTML="<img src='cat.gif' style='position:absolute; top: 8px; left: 200px; height:850px;  width:850px;'>";
+	var l=setInterval(function(){
+	document.getElementById("c").innerHTML="<img src='cat.gif' style='position:absolute; top: 8px; left: 200px; height:850px; -webkit-transform: rotate(90deg); -moz-transform: rotate(90deg);-o-transform: rotate(90deg); -ms-transform: rotate(90deg); transform: rotate(90deg); width:850px;'>";
+	setTimeout(function(){
+	document.getElementById("c").innerHTML="<img src='cat.gif' style='position:absolute; top: 8px; left: 200px; height:850px; -webkit-transform: rotate(180deg); -moz-transform: rotate(180deg);-o-transform: rotate(180deg); -ms-transform: rotate(180deg); transform: rotate(180deg); width:850px;'>";
+	},1000);
+	setTimeout(function(){
+	document.getElementById("c").innerHTML="<img src='cat.gif' style='position:absolute; top: 8px; left: 200px; height:850px; -webkit-transform: rotate(270deg); -moz-transform: rotate(270deg);-o-transform: rotate(270deg); -ms-transform: rotate(270deg); transform: rotate(270deg); width:850px;'>";
+	},2000);
+	setTimeout(function(){
+	document.getElementById("c").innerHTML="<img src='cat.gif' style='position:absolute; top: 8px; left: 200px; height:850px;  width:850px;'>";
+	},3000);
+	},4000);
+	var i=0;
+	var m=setInterval(function(){
+		var x= Math.floor((Math.random() * 1000) + 101);
+		var y= Math.floor((Math.random() * 1000) + 1);
+		var str=document.getElementById("e").innerHTML.concat("<img src='lol.png' style='position:absolute; top: ",y,"px; left: ",x,"px; height:100px;  width:100px;'>");
+		document.getElementById("e").innerHTML=str;
+	}
+	,20);
+	setTimeout(function(){
+		var rot=0;
+		clearInterval(m);
+		clearInterval(l);
+		document.getElementById("bu").innerHTML='<button onclick="lol()"><p id="d">Do NOT press me!!!</p></button>';
+		document.getElementById("r").innerHTML='';
+		document.getElementById("c").innerHTML="";
+		document.getElementById("e").innerHTML="";
+		document.getElementById("tro").innerHTML="";
+		ready=1;
+		document.getElementById("c").innerHTML="";
+		document.getElementById("fo").style.visibility = 'hidden';
+	},1000*60-1);
+}
+</script>
+<html>
